@@ -1,0 +1,50 @@
+.persona-name {
+  text-transform: capitalize;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #f0f0f0;
+  width: 300px;
+  text-align: center;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid firebrick;
+}
+
+.card h1 {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.persona-container {
+  border: 10px solid firebrick;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.context {
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+}
+
+*::after,
+*::before,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  cursor: url("./assets/cursor/customcursor.png"), auto;
+}
