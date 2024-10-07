@@ -1,24 +1,30 @@
-import orpheus from "./assets/persona/orpheus.png";
-import messiah from "./assets/persona/messiah.png";
-import athena from "./assets/persona/athena.png";
-import kaguya from "./assets/persona/kaguya.png";
-import raoul from "./assets/persona/raoul.png";
-import thanatos from "./assets/persona/thanatos.png";
-import ariadne from "./assets/persona/ariadne.png";
-import captainkid from "./assets/persona/captainkid.png";
-import zorro from "./assets/persona/zorro.png";
-import carmen from "./assets/persona/carmen.png";
-import joker from "./assets/joker.jpeg";
-import skull from "./assets/skull.jpeg";
-import mona from "./assets/morgana.jpeg";
-import panther from "./assets/panther.jpeg";
-import tsukuyumi from "./assets/persona/tsukuyumi.png";
-import arsene from "./assets/persona/arsene.png";
-import orpheuspicaro from "./assets/persona/orpheuspicaro.png";
-import ren from "./assets/ren.jpeg";
-import sakamoto from "./assets/sakamoto.jpeg";
-import cat from "./assets/cat.jpeg";
-import ann from "./assets/ann.jpeg";
+import orpheus from "./assets/media/persona5/persona/orpheus.png";
+import messiah from "./assets/media/persona5/persona/messiah.png";
+import athena from "./assets/media/persona5/persona/athena.png";
+import kaguya from "./assets/media/persona5/persona/kaguya.png";
+import raoul from "./assets/media/persona5/persona/raoul.png";
+import thanatos from "./assets/media/persona5/persona/thanatos.png";
+import ariadne from "./assets/media/persona5/persona/ariadne.png";
+import captainkid from "./assets/media/persona5/persona/captainkid.png";
+import zorro from "./assets/media/persona5/persona/zorro.png";
+import carmen from "./assets/media/persona5/persona/carmen.png";
+import joker from "./assets/media/persona5/joker.jpeg";
+import skull from "./assets/media/persona5/skull.jpeg";
+import mona from "./assets/media/persona5/morgana.jpeg";
+import panther from "./assets/media/persona5/panther.jpeg";
+import tsukuyumi from "./assets/media/persona5/persona/tsukuyumi.png";
+import arsene from "./assets/media/persona5/persona/arsene.png";
+import orpheuspicaro from "./assets/media/persona5/persona/orpheuspicaro.png";
+import ren from "./assets/media/persona5/ren.jpeg";
+import sakamoto from "./assets/media/persona5/sakamoto.jpeg";
+import cat from "./assets/media/persona5/cat.jpeg";
+import ann from "./assets/media/persona5/ann.jpeg";
+import makoto from "./assets/media/persona3/makoto.jpeg";
+import yukari from "./assets/media/persona3/yukari.jpeg";
+import junpei from "./assets/media/persona3/junpei.jpeg";
+import mitsuru from "./assets/media/persona3/mitsuru.jpeg";
+import sanada from "./assets/media/persona3/sanada.jpeg";
+
 export const data = [
   {
     id: 1,
@@ -74,5 +80,33 @@ export const data = [
     description:
       "Ann Takamaki is a central character in *Persona 5*, known for her fierce spirit and strong sense of justice. Initially introduced as a model and student at Shujin Academy, Ann faces significant challenges, including bullying and the complexities of her friendship with the infamous Kamoshida. Her persona, Carmen, embodies her rebellious nature and determination to stand up for herself and others. As a member of the Phantom Thieves, Ann plays a crucial role in their mission to change the hearts of corrupt individuals, using her empathy and charisma to connect with those who feel powerless. Throughout the game, Ann's growth is marked by her resilience, unwavering loyalty to her friends, and a deepening understanding of her own identity and strength in the face of adversity.",
     gif: "https://media.tenor.com/v_zdlcYSjY0AAAAC/persona5-ann-takamaki.gif",
+  },
+];
+
+export const user = [
+  {
+    id: 1,
+    image: makoto,
+    name: "Mokoto Yuki",
+  },
+  {
+    id: 2,
+    image: yukari,
+    name: "Yukari Takeba",
+  },
+  {
+    id: 3,
+    image: mitsuru,
+    name: "Mitsuru Kirijo",
+  },
+  {
+    id: 4,
+    image: junpei,
+    name: "Junpei Iori",
+  },
+  {
+    id: 5,
+    image: sanada,
+    name: "Akihiko Sanada",
   },
 ];
