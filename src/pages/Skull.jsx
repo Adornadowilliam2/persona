@@ -18,7 +18,12 @@ export default function Skull() {
           {data[1].persona.map((item) => (
             <li key={item.id}>
               <img src={item} alt={data[1].name} />
-              {`${item.split("/").pop().replace(".png", "").toUpperCase()}`}
+              {`${item
+                .split("/")
+                .pop()
+                .replace(".png", "")
+                .split("-")[0]
+                .toUpperCase()}`}
             </li>
           ))}
         </ul>

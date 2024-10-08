@@ -1,20 +1,24 @@
 import React from "react";
 import { data, user } from "../index";
 import { DataGrid } from "@mui/x-data-grid";
+import Navbar from "../componets/Navbar";
 
 export default function Summary() {
-  // Flatten the data into a format suitable for DataGrid
-  const rows = [...data, ...user].map((item) => ({
-    id: item.id,
+  const rows = [...data, ...user].map((item, index) => ({
+    id: index + 1,
     name: item.name,
     image: item.image,
   }));
 
   const columns = [
     {
+      field: "id",
+      headerName: "ID",
+    },
+    {
       field: "name",
       headerName: "Name",
-      flex: 1, // This allows the column to grow and shrink
+      flex: 1,
     },
     {
       field: "image",
@@ -32,7 +36,8 @@ export default function Summary() {
 
   return (
     <>
-      <h1>Hello world</h1>
+      <Navbar data={data} />
+      <h1>Persona Characters</h1>
       <DataGrid
         rows={rows}
         columns={columns}
@@ -40,6 +45,7 @@ export default function Summary() {
         rowsPerPageOptions={[5, 10, 20]}
         autoHeight
       />
+      {console.log(rows)}
     </>
   );
 }

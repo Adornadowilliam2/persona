@@ -18,7 +18,12 @@ export default function Joker() {
           {data[0].persona.map((item) => (
             <li key={item.id}>
               <img src={item} alt={data[0].name} />
-              {`${item.split("/").pop().replace(".png", "").toUpperCase()}`}
+              {`${item
+                .split("/")
+                .pop()
+                .replace(".png", "")
+                .split("-")[0]
+                .toUpperCase()}`}
             </li>
           ))}
           <li>And More</li>

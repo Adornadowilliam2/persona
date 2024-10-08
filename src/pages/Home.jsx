@@ -52,7 +52,8 @@ export default function Home() {
                       }}
                     />
                     <h1 className="persona-name">
-                      Persona name: {persona.split("/").pop().split(".")[0]}
+                      Persona name:{" "}
+                      {persona.split("/").pop().split(".")[0].split("-")[0]}
                     </h1>
                   </div>
                 </>

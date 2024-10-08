@@ -18,7 +18,12 @@ export default function Mona() {
           {data[2].persona.map((item) => (
             <li key={item.id}>
               <img src={item} alt={data[2].name} />
-              {`${item.split("/").pop().replace(".png", "").toUpperCase()}`}
+              {`${item
+                .split("/")
+                .pop()
+                .replace(".png", "")
+                .split("-")[0]
+                .toUpperCase()}`}
             </li>
           ))}
         </ul>
