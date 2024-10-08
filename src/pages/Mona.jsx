@@ -15,8 +15,8 @@ export default function Mona() {
         <img src={data[2].gif} alt="gif" />
         <h2>{`${data[2].alias}  Persona's`}</h2>
         <ul>
-          {data[2].persona.map((item) => (
-            <li key={item.id}>
+          {data[2].persona.map((item, index) => (
+            <li key={`${index + 1}`}>
               <img src={item} alt={data[2].name} />
               {`${item
                 .split("/")

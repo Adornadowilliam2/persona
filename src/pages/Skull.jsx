@@ -15,12 +15,13 @@ export default function Skull() {
         <img src={data[1].gif} alt="gif" />
         <h2>{`${data[1].alias}  Persona's`}</h2>
         <ul>
-          {data[1].persona.map((item) => (
-            <li key={item.id}>
+          {data[1].persona.map((item, index) => (
+            <li key={`${index + 1}`}>
               <img src={item} alt={data[1].name} />
               {`${item
                 .split("/")
                 .pop()
+                .replace("n", "n ")
                 .replace(".png", "")
                 .split("-")[0]
                 .toUpperCase()}`}

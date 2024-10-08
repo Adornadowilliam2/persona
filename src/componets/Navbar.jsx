@@ -15,7 +15,11 @@ export default function Navbar({ data }) {
       <Link to="/" style={{ textDecoration: "none" }}>
         <h1>Persona</h1>
       </Link>
-      <IconButton onClick={toggleDialog} className="hamburger">
+      <IconButton
+        onClick={toggleDialog}
+        className="hamburger"
+        style={{ color: "white" }}
+      >
         <Menu />
       </IconButton>
 

@@ -15,8 +15,8 @@ export default function Panther() {
         <img src={data[3].gif} alt="gif" />
         <h2>{`${data[3].alias}  Persona's`}</h2>
         <ul>
-          {data[3].persona.map((item) => (
-            <li key={item.id}>
+          {data[3].persona.map((item, index) => (
+            <li key={`${index + 1}`}>
               <img src={item} alt={data[3].name} />
               {`${item
                 .split("/")

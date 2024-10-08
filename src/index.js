@@ -14,7 +14,7 @@ import mona from "./assets/media/persona5/morgana.jpeg";
 import panther from "./assets/media/persona5/panther.jpeg";
 import tsukuyumi from "./assets/media/persona5/persona/tsukuyumi.png";
 import arsene from "./assets/media/persona5/persona/arsene.png";
-import orpheuspicaro from "./assets/media/persona5/persona/orpheuspicaro.png";
+import orpheuspicaro from "./assets/media/persona5/persona/orpheus picaro.png";
 import ren from "./assets/media/persona5/ren.jpeg";
 import sakamoto from "./assets/media/persona5/sakamoto.jpeg";
 import cat from "./assets/media/persona5/cat.jpeg";

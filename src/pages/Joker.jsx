@@ -15,18 +15,19 @@ export default function Joker() {
         <img src={data[0].gif} alt="gif" />
         <h2>{`${data[0].alias}  Persona's`}</h2>
         <ul>
-          {data[0].persona.map((item) => (
-            <li key={item.id}>
+          {data[0].persona.map((item, index) => (
+            <li key={`${item.id + index + 1}`}>
+              {console.log(`${index + 1}`)}
               <img src={item} alt={data[0].name} />
               {`${item
                 .split("/")
                 .pop()
+                .replace("%20", " ")
                 .replace(".png", "")
                 .split("-")[0]
                 .toUpperCase()}`}
             </li>
           ))}
-          <li>And More</li>
         </ul>
       </section>
     </>
