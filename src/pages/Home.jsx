@@ -1,7 +1,6 @@
 import React from "react";
-import { data } from "../index";
-import { Link } from "react-router-dom";
-export default function Home() {
+
+export default function Home({ data, Link }) {
   return (
     <>
       {data.map((item) => (
@@ -53,7 +52,12 @@ export default function Home() {
                     />
                     <h1 className="persona-name">
                       Persona name:{" "}
-                      {persona.split("/").pop().split(".")[0].split("-")[0]}
+                      {persona
+                        .split("/")
+                        .pop()
+                        .split(".")[0]
+                        .split("-")[0]
+                        .replace("%20", " ")}
                     </h1>
                   </div>
                 </>

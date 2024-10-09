@@ -15,7 +15,7 @@
 }
 
 .card h1 {
-  font-family: "Pixelify Sans", sans-serif;
+  font-family: "Caveat", cursive;
   font-optical-sizing: auto;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .context {
-  font-family: "Noto Serif JP", serif;
+  font-family: "Yatra One", system-ui;
   font-optical-sizing: auto;
 }
 

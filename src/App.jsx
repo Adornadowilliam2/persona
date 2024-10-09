@@ -7,36 +7,53 @@ import Panther from "./pages/Panther";
 import Skull from "./pages/Skull";
 import Persona3 from "./pages/Persona3";
 import Summary from "./pages/Summary";
-
+import { data, user } from "./index";
+import { Link } from "react-router-dom";
+import Navbar from "./componets/Navbar";
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
+      element: <Home data={data} Link={Link} />,
     },
     {
       path: "/joker",
-      element: <Joker />,
+      element: (
+        <>
+          <Navbar data={data} />
+          <Joker data={data} />
+        </>
+      ),
     },
     {
       path: "/skull",
-      element: <Skull />,
+      element: <Skull data={data} />,
     },
     {
       path: "/mona",
-      element: <Mona />,
+      element: <Mona data={data} />,
     },
     {
       path: "/panther",
-      element: <Panther />,
+      element: <Panther data={data} />,
     },
     {
       path: "/persona3",
-      element: <Persona3 />,
+      element: (
+        <>
+          <Navbar data={data} />
+          <Persona3 data={data} user={user} />
+        </>
+      ),
     },
     {
       path: "/summary",
-      element: <Summary />,
+      element: (
+        <>
+          <Navbar data={data} />
+          <Summary data={data} user={user} />
+        </>
+      ),
     },
   ]);
   return <RouterProvider router={router} />;

@@ -1,11 +1,8 @@
 import React from "react";
-import { data } from "../index";
-import Navbar from "../componets/Navbar";
 
-export default function Joker() {
+export default function Joker({ data }) {
   return (
     <>
-      <Navbar data={data} />
       <section>
         <h1>{data[0].name}</h1>
         <div className="pfp">

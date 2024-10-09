@@ -1,10 +1,7 @@
 import React from "react";
-import { data, user } from "../index";
-import Navbar from "../componets/Navbar";
-export default function Persona3() {
+export default function Persona3({ data, user }) {
   return (
     <>
-      <Navbar data={data} />
       <h1
         style={{
           textAlign: "center",

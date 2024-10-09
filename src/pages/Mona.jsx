@@ -1,8 +1,7 @@
 import React from "react";
-import { data } from "../index";
 import Navbar from "../componets/Navbar";
 
-export default function Mona() {
+export default function Mona({ data }) {
   return (
     <>
       <Navbar data={data} />

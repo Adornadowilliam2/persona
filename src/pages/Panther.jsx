@@ -1,8 +1,7 @@
 import React from "react";
-import { data } from "../index";
 import Navbar from "../componets/Navbar";
 
-export default function Panther() {
+export default function Panther({ data }) {
   return (
     <>
       <Navbar data={data} />

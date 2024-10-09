@@ -1,9 +1,7 @@
 import React from "react";
-import { data, user } from "../index";
 import { DataGrid } from "@mui/x-data-grid";
-import Navbar from "../componets/Navbar";
 
-export default function Summary() {
+export default function Summary({ data, user }) {
   const rows = [...data, ...user].map((item, index) => ({
     id: index + 1,
     name: item.name,
@@ -36,7 +34,6 @@ export default function Summary() {
 
   return (
     <>
-      <Navbar data={data} />
       <h1>Persona Characters</h1>
       <DataGrid
         rows={rows}
@@ -45,7 +42,6 @@ export default function Summary() {
         rowsPerPageOptions={[5, 10, 20]}
         autoHeight
       />
-      {console.log(rows)}
     </>
   );
 }

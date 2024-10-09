@@ -57,7 +57,7 @@ export const data = [
     persona: [captainkid],
     description:
       "Ryuji Sakamoto is a key member of the Phantom Thieves in Persona 5, known for his energetic personality and unwavering loyalty to his friends. Initially introduced as a former track star with a rebellious streak, Ryuji struggles against the oppressive environment of Shujin Academy, particularly in his battle against the bullying of the gym teacher, Suguru Kamoshida. With his persona, Captain Kidd, he channels his desire for justice and freedom, embodying the group’s inner strength and determination. He is also committed to their mission to confront corruption. Ryuji's comedic charm, fierce determination, and deep sense of camaraderie make him a beloved character, as he balances his impulsive nature with moments of introspection and growth throughout their adventures.",
-    gif: "https://68.media.tumblr.com/e298da1e46f90e2f32d86b51d29b6da1/tumblr_osiiuk4SwM1vwvx0xo1_500.gif",
+    gif: "https://i.pinimg.com/originals/90/69/6a/90696aa9eb980ec0fde27670b554ad4e.gif",
   },
   {
     id: 3,
