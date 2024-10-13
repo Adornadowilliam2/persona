@@ -20,6 +20,8 @@ export default function Panther({ data }) {
                 .pop()
                 .replace(".png", "")
                 .split("-")[0]
+                .split("?")
+                .shift()
                 .toUpperCase()}`}
             </li>
           ))}

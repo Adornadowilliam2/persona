@@ -20,6 +20,8 @@ export default function Mona({ data }) {
                 .pop()
                 .replace(".png", "")
                 .split("-")[0]
+                .split("?")
+                .shift()
                 .toUpperCase()}`}
             </li>
           ))}

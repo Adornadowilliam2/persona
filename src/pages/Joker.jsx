@@ -21,6 +21,8 @@ export default function Joker({ data }) {
                 .pop()
                 .replace("%20", " ")
                 .replace(".png", "")
+                .split("?")
+                .shift()
                 .split("-")[0]
                 .toUpperCase()}`}
             </li>
