@@ -27,15 +27,30 @@ function App() {
     },
     {
       path: "/skull",
-      element: <Skull data={data} />,
+      element: (
+        <>
+          <Navbar data={data} />
+          <Skull data={data} />
+        </>
+      ),
     },
     {
       path: "/mona",
-      element: <Mona data={data} />,
+      element: (
+        <>
+          <Navbar data={data} />
+          <Mona data={data} />
+        </>
+      ),
     },
     {
       path: "/panther",
-      element: <Panther data={data} />,
+      element: (
+        <>
+          <Navbar data={data} />
+          <Panther data={data} />
+        </>
+      ),
     },
     {
       path: "/persona3",

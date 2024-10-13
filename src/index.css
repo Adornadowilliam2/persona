@@ -46,5 +46,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  cursor: url("./assets/cursor/customcursor.png"), auto;
+  cursor: url(https://github.com/Adornadowilliam2/persona/blob/images/cursor/customcursor.png?raw=true),
+    auto;
 }

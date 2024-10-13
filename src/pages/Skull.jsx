@@ -1,10 +1,8 @@
 import React from "react";
-import Navbar from "../componets/Navbar";
 
 export default function Skull({ data }) {
   return (
     <>
-      <Navbar data={data} />
       <section>
         <h1>{data[1].name}</h1>
         <div className="pfp">
@@ -23,6 +21,8 @@ export default function Skull({ data }) {
                 .replace("n", "n ")
                 .replace(".png", "")
                 .split("-")[0]
+                .split("?")
+                .shift()
                 .toUpperCase()}`}
             </li>
           ))}

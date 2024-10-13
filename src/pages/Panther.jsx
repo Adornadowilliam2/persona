@@ -1,10 +1,8 @@
 import React from "react";
-import Navbar from "../componets/Navbar";
 
 export default function Panther({ data }) {
   return (
     <>
-      <Navbar data={data} />
       <section>
         <h1>{data[3].name}</h1>
         <div className="pfp">
