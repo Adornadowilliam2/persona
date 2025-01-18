@@ -37,7 +37,7 @@ export default function Home({ data, Link }) {
             </div>
             <main className="card-container">
               {item.persona.map((persona) => (
-                <>
+                <div key={persona.split("/").pop()}>
                   <div className="card">
                     <img
                       src={persona}
@@ -60,7 +60,7 @@ export default function Home({ data, Link }) {
                         .replace("%20", " ")}
                     </h1>
                   </div>
-                </>
+                </div>
               ))}
             </main>
           </Link>

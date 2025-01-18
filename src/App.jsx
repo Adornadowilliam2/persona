@@ -9,7 +9,7 @@ import Persona3 from "./pages/Persona3";
 import Summary from "./pages/Summary";
 import { data, user } from "./index";
 import { Link } from "react-router-dom";
-import Navbar from "./componets/Navbar";
+import Navbar from "./components/Navbar";
 function App() {
   const router = createBrowserRouter([
     {
