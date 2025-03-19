@@ -49,3 +49,29 @@
   cursor: url(https://github.com/Adornadowilliam2/persona/blob/images/cursor/customcursor.png?raw=true),
     auto;
 }
+
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%); /* Starts from 100% to the right */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* Ends at original position */
+    opacity: 1;
+  }
+}
+
+#loading-animation {
+  animation: slideLeft 1s ease-out; /* 1s duration, easing effect */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fb0401;
+  height: 100vh;
+}
+
