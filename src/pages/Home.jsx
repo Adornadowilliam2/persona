@@ -17,6 +17,14 @@ export default function Home({ data }) {
 
   return (
     <>
+      <div style={{display:'flex', background:"#fb0401", padding:"10px", alignItems:'center'}}>
+        <img src={bg} alt="logo" style={{width:'100px', mixBlendMode:"multiply"}} />
+        <ul style={{display:'flex', alignItems:'center', gap:'10px', color:'white',padding:'10px', fontSize:'15px'}}>
+          <li>Home</li>
+          <li>Features</li>
+          <li>Contact</li>
+        </ul>
+      </div>
       {data.map((item) => (
         <div className="persona-container" key={item.id}>
           <Link
