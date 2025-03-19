@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom"; // Assuming you're using React Router
+import { Link } from "react-router-dom"; 
+import {bg} from "../src/assets/logo-unscreen.gif";
 
 export default function Home({ data }) {
   const [showLoading, setShowLoading] = useState(true);
@@ -80,7 +81,7 @@ export default function Home({ data }) {
         </div>
       ))}
       
-      {/* Conditionally render the loading animation */}
+    
       {showLoading && (
         <div
           id="loading-animation"
@@ -91,7 +92,7 @@ export default function Home({ data }) {
           }}
         >
           <img
-            src="../src/assets/logo-unscreen.gif"
+            src={bg}
             alt="logo"
             style={{ mixBlendMode: "multiply" }}
           />
