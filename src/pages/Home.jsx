@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; 
-import {bg} from "../src/assets/logo-unscreen.gif";
+import  bg  from "../assets/logo-unscreen.gif";
 
 export default function Home({ data }) {
   const [showLoading, setShowLoading] = useState(true);
 
   useEffect(() => {
-    // Set a timeout to hide the loading animation after 5 seconds
+    
     const timer = setTimeout(() => {
       setShowLoading(false);
-    }, 5000); // 5000 ms = 5 seconds
+    }, 5000); 
 
-    // Clean up the timeout if the component is unmounted
+    
     return () => clearTimeout(timer);
   }, []);
 
