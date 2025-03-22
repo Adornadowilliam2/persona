@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 import bg from "../assets/logo-unscreen.gif";
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton, useTheme, createTheme, ThemeProvider } from "@mui/material";
 import { Brightness4, Brightness7 } from "@mui/icons-material";
+import Navbar from "../components/Navbar";
 
 
 export default function Home({ data }) {
   const [showLoading, setShowLoading] = useState(true);
-  const [themeMode, setThemeMode] = useState("dark"); // Default is dark mode
+
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -19,29 +20,12 @@ export default function Home({ data }) {
   }, []);
 
   const [dialog, showDialog] = useState(null);
+  const [themeMode, setThemeMode] = useState("dark");
 
-
-  const theme = createTheme({
-    palette: {
-      mode: themeMode,
-      ...(themeMode === "light" && {
-        background: {
-          default: "#f4f4f4",
-        },
-        text: {
-          primary: "#000000",
-        },
-      }),
-    },
-  });
-
-  // Toggle the theme mode
-  const toggleTheme = () => {
-    setThemeMode((prevMode) => (prevMode === "dark" ? "light" : "dark"));
-  };
 
   return (
-    <ThemeProvider theme={theme}>
+    <>
+
       <main
         style={{
           display: showLoading ? "none" : "block",
@@ -49,43 +33,8 @@ export default function Home({ data }) {
           color: themeMode === "dark" ? "white" : "black",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            background: "#fb0401",
-            padding: "10px",
-            alignItems: "center",
-          }}
-        >
-          <img
-            src={bg}
-            alt="logo"
-            style={{ width: "100px", mixBlendMode: "multiply" }}
-          />
-          <ul
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "10px",
-              color: "white",
-              padding: "10px",
-              fontSize: "15px",
-            }}
-          >
-            <li>Home</li>
-            <li>Features</li>
-            <li>Contact</li>
-          </ul>
+        <Navbar />
 
-          {/* Theme Toggle Button */}
-          <IconButton
-            color="inherit"
-            onClick={toggleTheme}
-            style={{ marginLeft: "auto" }}
-          >
-            {themeMode === "dark" ? <Brightness7 /> : <Brightness4 />}
-          </IconButton>
-        </div>
 
         {data.map((item) => (
           <div className="persona-container" key={item.id}>
@@ -190,6 +139,6 @@ export default function Home({ data }) {
           <Button variant="contained" onClick={() => showDialog(null)}>Close</Button>
         </DialogActions>
       </Dialog>
-    </ThemeProvider>
+    </>
   );
 }

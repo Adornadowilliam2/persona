@@ -1,14 +1,16 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
-import Joker from "./pages/Joker";
-import Mona from "./pages/Mona";
-import Panther from "./pages/Panther";
-import Skull from "./pages/Skull";
+import Joker from "./pages/characters/Joker";
+import Mona from "./pages/characters/Mona";
+import Panther from "./pages/characters/Panther";
+import Skull from "./pages/characters/Skull";
 
 import { data} from "./index";
 import { Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Contact from "./pages/Contact";
+import Features from "./pages/Features";
 function App() {
   const router = createBrowserRouter([
     {
@@ -19,7 +21,7 @@ function App() {
       path: "/joker",
       element: (
         <>
-          <Navbar data={data} />
+
           <Joker data={data} />
         </>
       ),
@@ -28,7 +30,7 @@ function App() {
       path: "/skull",
       element: (
         <>
-          <Navbar data={data} />
+       
           <Skull data={data} />
         </>
       ),
@@ -37,7 +39,7 @@ function App() {
       path: "/mona",
       element: (
         <>
-          <Navbar data={data} />
+      
           <Mona data={data} />
         </>
       ),
@@ -46,11 +48,19 @@ function App() {
       path: "/panther",
       element: (
         <>
-          <Navbar data={data} />
+
           <Panther data={data} />
         </>
       ),
     },
+    {
+      path:'/contact',
+      element: <Contact />
+    },
+    {
+      path:'/features',
+      element: <Features />
+    }
 
   ]);
   return <RouterProvider router={router} />;

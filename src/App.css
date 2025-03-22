@@ -106,6 +106,6 @@ section ul li img {
   }
 
   #gif{
-    width: 100%;
+    display: none;
   }
 }

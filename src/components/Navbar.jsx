@@ -1,59 +1,72 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Dialog, DialogTitle, DialogContent, IconButton } from "@mui/material";
-import { Menu, Close } from "@mui/icons-material"; // Use Material Icons
+import bg from "../assets/logo-unscreen.gif";
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton, useTheme, createTheme, ThemeProvider } from "@mui/material";
+import { Brightness4, Brightness7 } from "@mui/icons-material";
+
 
 export default function Navbar({ data }) {
-  const [open, setOpen] = useState(false);
 
-  const toggleDialog = () => {
-    setOpen(!open);
+   const [themeMode, setThemeMode] = useState("dark"); 
+    const theme = createTheme({
+       palette: {
+         mode: themeMode,
+         ...(themeMode === "light" && {
+           background: {
+             default: "#f4f4f4",
+           },
+           text: {
+             primary: "#000000",
+           },
+         }),
+       },
+     });
+   
+   
+  const toggleTheme = () => {
+    setThemeMode((prevMode) => (prevMode === "dark" ? "light" : "dark"));
   };
 
   return (
-    <nav>
-      <Link to="/" style={{ textDecoration: "none" }}>
-        <h1>Persona</h1>
-      </Link>
-      <IconButton
-        onClick={toggleDialog}
-        className="hamburger"
-        style={{ color: "white" }}
+    <ThemeProvider theme={theme}>
+    <div
+      style={{
+        display: "flex",
+        background: "#fb0401",
+        padding: "10px",
+        alignItems: "center",
+      }}
+    >
+      <img
+        src={bg}
+        alt="logo"
+        style={{ width: "100px", mixBlendMode: "multiply" }}
+      />
+      <ul
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "10px",
+          color: "white",
+          padding: "10px",
+          fontSize: "15px",
+        }}
       >
-        <Menu />
-      </IconButton>
+        <li><Link to="/" style={{ textDecoration: "none", color: "black" }}>Home</Link></li>
+        <li><Link to="/features" style={{ textDecoration: "none", color: "black" }}>Features</Link></li>
 
-      <Dialog open={open} onClose={toggleDialog} maxWidth="xs" fullWidth>
-        <DialogTitle>
-          Menu
-          <IconButton
-            onClick={toggleDialog}
-            style={{ position: "absolute", right: 8, top: 8 }}
-          >
-            <Close />
-          </IconButton>
-        </DialogTitle>
-        <DialogContent>
-          <ul>
-            <li>
-              <Link to="/" className="navbar-child">
-                Home</Link>
-            </li>
-            {data.map((item) => (
-              <li key={item.id}>
-                <Link
-                  to={`/${item.alias}`}
-                  className="navbar-child"
-                  onClick={toggleDialog}
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-       
-          </ul>
-        </DialogContent>
-      </Dialog>
-    </nav>
+        <li><Link to="/contact" style={{ textDecoration: "none", color: "black" }} >Contact</Link></li>
+      </ul>
+
+      {/* Theme Toggle Button */}
+      <IconButton
+        color="inherit"
+        onClick={toggleTheme}
+        style={{ marginLeft: "auto" }}
+      >
+        {themeMode === "dark" ? <Brightness7 /> : <Brightness4 />}
+      </IconButton>
+    </div>
+    </ThemeProvider>
   );
 }

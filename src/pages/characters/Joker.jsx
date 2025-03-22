@@ -1,8 +1,10 @@
 import React from "react";
+import Navbar from "../../components/Navbar";
 
 export default function Joker({ data }) {
   return (
     <>
+    <Navbar />
       <section>
        <div id="background" >
        <div className="flexbox">
