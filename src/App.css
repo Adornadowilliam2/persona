@@ -48,25 +48,6 @@ section {
   font-family: "Yatra One", system-ui;
 }
 
-section .pfp img {
-  border: 1px solid black;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-
-  margin: 10px;
-}
-
-section img[alt="gif"] {
-  width: 50%;
-  min-width: 100%;
-  height: 500px;
-  object-fit: cover;
-  margin-top: 10px;
-  background-size: 100% 100%;
-}
-
 
 section ul li img {
   width: 200px;
@@ -76,36 +57,77 @@ section ul li img {
 
 .flexbox {
   display: flex;
-  justify-content: center;
+
   align-items: center;
 }
 
 
 #background {
   background-image: url("assets/background.png");
-  height: 40vh;
+
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 
-#gif{
+#gif {
   width: 400px;
   display: block;
   margin: 10px auto;
+  height: 200px;
+  object-fit: contain;
+}
+
+.pfp {
+  padding: 5px;
+}
+
+.pfp img {
+
+
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+
+
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+}
+footer li{
+  display: inline;
+  margin-right: 15px;
+ 
 }
 
 @media screen and (max-width: 600px) {
 
-  .flexbox {
-    flex-direction: column;
-    flex-wrap: wrap;
+
+  .pfp img {
+    width: 100px;
+    left: 0;
+    height: max-content;
   }
 
-  #background {
-    height: 90vh;
+
+  #gif {
+    width: 100%;
   }
 
-  #gif{
-    display: none;
+  footer{
+    position: relative;
+    margin-top: 10px;
+  }
+
+  footer ul{
+    display: flex;
   }
 }

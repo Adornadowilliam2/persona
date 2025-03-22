@@ -1,34 +1,15 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { IconButton } from '@mui/material';
+import { Brightness4, Brightness7 } from '@mui/icons-material';
 import bg from "../assets/logo-unscreen.gif";
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton, useTheme, createTheme, ThemeProvider } from "@mui/material";
-import { Brightness4, Brightness7 } from "@mui/icons-material";
+import { Link } from 'react-router-dom';
 
-
-export default function Navbar({ data }) {
-
-   const [themeMode, setThemeMode] = useState("dark"); 
-    const theme = createTheme({
-       palette: {
-         mode: themeMode,
-         ...(themeMode === "light" && {
-           background: {
-             default: "#f4f4f4",
-           },
-           text: {
-             primary: "#000000",
-           },
-         }),
-       },
-     });
-   
-   
+export default function Navbar({ setThemeMode, themeMode }) {
   const toggleTheme = () => {
     setThemeMode((prevMode) => (prevMode === "dark" ? "light" : "dark"));
   };
 
   return (
-    <ThemeProvider theme={theme}>
     <div
       style={{
         display: "flex",
@@ -54,8 +35,7 @@ export default function Navbar({ data }) {
       >
         <li><Link to="/" style={{ textDecoration: "none", color: "black" }}>Home</Link></li>
         <li><Link to="/features" style={{ textDecoration: "none", color: "black" }}>Features</Link></li>
-
-        <li><Link to="/contact" style={{ textDecoration: "none", color: "black" }} >Contact</Link></li>
+        <li><Link to="/contact" style={{ textDecoration: "none", color: "black" }}>Contact</Link></li>
       </ul>
 
       {/* Theme Toggle Button */}
@@ -67,6 +47,5 @@ export default function Navbar({ data }) {
         {themeMode === "dark" ? <Brightness7 /> : <Brightness4 />}
       </IconButton>
     </div>
-    </ThemeProvider>
   );
 }
