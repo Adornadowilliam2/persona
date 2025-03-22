@@ -35,6 +35,10 @@ export default function Navbar({ data }) {
         </DialogTitle>
         <DialogContent>
           <ul>
+            <li>
+              <Link to="/" className="navbar-child">
+                Home</Link>
+            </li>
             {data.map((item) => (
               <li key={item.id}>
                 <Link
@@ -46,16 +50,7 @@ export default function Navbar({ data }) {
                 </Link>
               </li>
             ))}
-            <li>
-              <Link to="/persona3" className="navbar-child">
-                Persona 3 Characters
-              </Link>
-            </li>
-            <li>
-              <Link to="/summary" className="navbar-child">
-                Summary
-              </Link>
-            </li>
+       
           </ul>
         </DialogContent>
       </Dialog>

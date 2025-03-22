@@ -42,7 +42,7 @@ section {
   margin: auto;
   width: 80%;
   border: 1px solid black;
-  text-align: center;
+  border-radius: 10px;
   margin-top: 10px;
   padding: 10px;
   font-family: "Yatra One", system-ui;
@@ -67,13 +67,6 @@ section img[alt="gif"] {
   background-size: 100% 100%;
 }
 
-@media screen and (max-width: 600px) {
-  section img[alt="gif"] {
-    width: 100%;
-    margin: 0;
-    object-fit: contain;
-  }
-}
 
 section ul li img {
   width: 200px;
@@ -81,16 +74,29 @@ section ul li img {
   object-fit: contain;
 }
 
-section ul {
+.flexbox {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 
-section li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid black;
+
+#background {
+  background-image: url("assets/background.png");
+  height: 40vh;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+@media screen and (max-width: 600px) {
+
+  .flexbox {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  #background {
+    height: 90vh;
+  }
 }

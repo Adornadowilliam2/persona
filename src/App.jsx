@@ -5,9 +5,8 @@ import Joker from "./pages/Joker";
 import Mona from "./pages/Mona";
 import Panther from "./pages/Panther";
 import Skull from "./pages/Skull";
-import Persona3 from "./pages/Persona3";
-import Summary from "./pages/Summary";
-import { data, user } from "./index";
+
+import { data} from "./index";
 import { Link } from "react-router-dom";
 import Navbar from "./components/Navbar";
 function App() {
@@ -52,24 +51,7 @@ function App() {
         </>
       ),
     },
-    {
-      path: "/persona3",
-      element: (
-        <>
-          <Navbar data={data} />
-          <Persona3 data={data} user={user} />
-        </>
-      ),
-    },
-    {
-      path: "/summary",
-      element: (
-        <>
-          <Navbar data={data} />
-          <Summary data={data} user={user} />
-        </>
-      ),
-    },
+
   ]);
   return <RouterProvider router={router} />;
 }
