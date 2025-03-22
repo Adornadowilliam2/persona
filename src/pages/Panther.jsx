@@ -14,7 +14,7 @@ export default function Panther({ data }) {
       <p style={{background:'black', color:'white', padding:'10px'}}>{data[3].description}</p>
      </div>
      </div>
-     <img src={data[3].gif} style={{width:'400px', display:'block', margin:'10px auto'}} />
+     <img src={data[3].gif} id="gif" />
     
     </section>
   </>

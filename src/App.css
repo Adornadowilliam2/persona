@@ -88,6 +88,11 @@ section ul li img {
   background-size: 100% 100%;
 }
 
+#gif{
+  width: 400px;
+  display: block;
+  margin: 10px auto;
+}
 
 @media screen and (max-width: 600px) {
 
@@ -98,5 +103,9 @@ section ul li img {
 
   #background {
     height: 90vh;
+  }
+
+  #gif{
+    width: 100%;
   }
 }

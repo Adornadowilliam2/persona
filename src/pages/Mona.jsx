@@ -14,7 +14,7 @@ export default function Mona({ data }) {
       <p style={{background:'black', color:'white', padding:'10px'}}>{data[2].description}</p>
      </div>
      </div>
-     <img src={data[2].gif} style={{width:'400px', display:'block', margin:'10px auto'}} />
+     <img src={data[2].gif} id="gif" />
     
     </section>
   </>

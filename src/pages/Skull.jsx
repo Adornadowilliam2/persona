@@ -14,7 +14,7 @@ export default function Skull({ data }) {
       <p style={{background:'black', color:'white', padding:'10px'}}>{data[1].description}</p>
      </div>
      </div>
-     <img src={data[1].gif} style={{width:'400px', display:'block', margin:'10px auto'}} />
+     <img src={data[1].gif} id="gif" />
     
     </section>
   </>
