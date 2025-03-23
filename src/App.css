@@ -117,13 +117,22 @@ img[alt="Contact Us"] {
   width: 400px;
 }
 
+#contact-span{
+  padding: 50px;
+
+}
+
 @media screen and (max-width: 600px) {
   img[alt="Contact Us"] {
-    width: 200px;
+    width: 100px;
   }
   #map{
     width: 100%;
     height: 200px;
+  }
+
+  #contact-span{
+    padding: 5px;
   }
 
 

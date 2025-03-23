@@ -19,7 +19,7 @@ export default function Contact() {
           color: 'white',
         }}
       >
-        <span style={{ padding: '50px' }}>
+        <span id='contact-span'>
           <h1>Get in Touch</h1>
           <p>If you have any questions or feedback, please don't hesitate to contact us.</p>
         </span>
@@ -48,7 +48,7 @@ export default function Contact() {
             <strong>Email:</strong> support@persona.jp
           </p>
 
-         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3240.0770297793506!2d139.771111!3d35.699722!3m2!1i1024!2i768!4f13.1!4m3!3e6!4m0!4m0!5e0!3m2!1sen!2sph!4v1742689539884!5m2!1sen!2sph" id='map'  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3240.0770297793506!2d139.771111!3d35.699722!3m2!1i1024!2i768!4f13.1!4m3!3e6!4m0!4m0!5e0!3m2!1sen!2sph!4v1742689539884!5m2!1sen!2sph" id='map'  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         
         </div>
 
