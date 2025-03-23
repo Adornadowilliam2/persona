@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import bg from "../assets/logo-unscreen.gif";
 import { Button, Dialog, DialogActions, DialogContent, DialogTitle, ThemeProvider, createTheme } from "@mui/material";
-import { Brightness4, Brightness7 } from "@mui/icons-material";
 import Navbar from "../components/Navbar";
 import Details from "./characters/Details";
 import Footer from "../components/Footer";
@@ -11,7 +10,12 @@ export default function Home({ data }) {
   const [showLoading, setShowLoading] = useState(true);
   const [dialog, showDialog] = useState(null);
   const [themeMode, setThemeMode] = useState("dark");
-  const [showDetails, setShowDetails] = useState(null);
+
+  // Load showDetails from localStorage if it exists, otherwise set it to null
+  const [showDetails, setShowDetails] = useState(() => {
+    const savedDetails = localStorage.getItem("showDetails");
+    return savedDetails ? JSON.parse(savedDetails) : null;
+  });
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -20,6 +24,15 @@ export default function Home({ data }) {
 
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+ 
+    if (showDetails) {
+      localStorage.setItem("showDetails", JSON.stringify(showDetails));
+    } else {
+      localStorage.removeItem("showDetails");
+    }
+  }, [showDetails]);
 
   // Create the theme based on themeMode
   const theme = createTheme({
@@ -48,7 +61,7 @@ export default function Home({ data }) {
                 color: themeMode === "dark" ? "white" : "black",
               }}
             >
-              <Navbar setThemeMode={setThemeMode} />
+              <Navbar setThemeMode={setThemeMode} setShowDetails={setShowDetails} showDetails={showDetails} />
 
               {data.map((item) => (
                 <div className="persona-container" key={item.id}>
@@ -166,7 +179,7 @@ export default function Home({ data }) {
                 color: themeMode === "dark" ? "white" : "black",
               }}
             >
-              <Details data={showDetails} setThemeMode={setThemeMode} themeMode={themeMode} />
+              <Details data={showDetails} setThemeMode={setThemeMode} themeMode={themeMode} setShowDetails={setShowDetails} showDetails={showDetails} />
               <Footer data={data} setShowDetails={setShowDetails} />
             </div>
           </>

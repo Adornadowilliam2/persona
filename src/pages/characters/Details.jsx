@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import Navbar from '../../components/Navbar';
 
 
-export default function Details({ data, setThemeMode }) {
+export default function Details({ data, setThemeMode, setShowDetails, showDetails }) {
 
   return (
     <div >
-        <Navbar setThemeMode={setThemeMode} />
+        <Navbar setThemeMode={setThemeMode} setShowDetails={setShowDetails} showDetails={showDetails} />
         <section >
         <div id="background" >
           <div className="flexbox">

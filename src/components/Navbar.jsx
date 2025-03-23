@@ -1,13 +1,21 @@
-import React from 'react';
 import { IconButton } from '@mui/material';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
 import bg from "../assets/logo-unscreen.gif";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
-export default function Navbar({ setThemeMode, themeMode }) {
+export default function Navbar({ setThemeMode, themeMode,  setShowDetails,showDetails }) {
   const toggleTheme = () => {
     setThemeMode((prevMode) => (prevMode === "dark" ? "light" : "dark"));
   };
+
+  const navigate = useNavigate();
+
+  const handleHomeClick = () => {
+    localStorage.removeItem("showDetails");
+    setShowDetails(!showDetails);
+    navigate('/');
+  };
+
 
   return (
     <div
@@ -33,7 +41,10 @@ export default function Navbar({ setThemeMode, themeMode }) {
           fontSize: "15px",
         }}
       >
-        <li><Link to="/" style={{ textDecoration: "none", color: "black" }}>Home</Link></li>
+        <li><Link   onClick={(e) => {
+          e.preventDefault(); 
+          handleHomeClick();  
+        }} style={{ textDecoration: "none", color: "black" }}>Home</Link></li>
         <li><Link to="/features" style={{ textDecoration: "none", color: "black" }}>Features</Link></li>
         <li><Link to="/contact" style={{ textDecoration: "none", color: "black" }}>Contact</Link></li>
       </ul>
