@@ -108,7 +108,23 @@ footer li{
  
 }
 
+#map{
+  width: 600px;
+  height: 350px;
+
+}
+img[alt="Contact Us"] {
+  width: 400px;
+}
+
 @media screen and (max-width: 600px) {
+  img[alt="Contact Us"] {
+    width: 200px;
+  }
+  #map{
+    width: 100%;
+    height: 200px;
+  }
 
 
   .pfp img {
